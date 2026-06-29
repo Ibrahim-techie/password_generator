@@ -5,6 +5,7 @@ function App() {
   const [password, setpassword] = useState("");
   const [character, setcharacter] = useState(false);
   const [number, setnumber] = useState(false);
+  const [copied, setCopied] = useState(false);
 
   const passwordGenerator = () => {
   let str = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
@@ -30,6 +31,11 @@ const reference=useRef(null);
   function copytoclipboard(){
       reference.current?.select();
     navigator.clipboard.writeText(password);
+    setCopied(true);
+
+    setTimeout(() => {
+        setCopied(false);
+    }, 2000);
   }
 
   return (
@@ -85,6 +91,9 @@ const reference=useRef(null);
   >
     Copy to Clipboard
   </button>
+  <button className="text-white font font-semibold py-2">
+    {copied ? "Copied ✓" : "Copy to Clipboard"}
+</button>
 </div>
 
       </div>

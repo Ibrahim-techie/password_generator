@@ -1,16 +1,134 @@
-# React + Vite
+# 🔐 Password Generator
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+A modern and responsive **Password Generator** built with **React**, **Vite**, and **Tailwind CSS**. Generate strong and secure passwords with customizable options such as password length, numbers, and special characters. Copy the generated password to your clipboard with a single click.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 🚀 Features
 
-## React Compiler
+* 🔑 Generate random secure passwords
+* 📏 Adjustable password length (8–100 characters)
+* 🔢 Option to include numbers
+* ✨ Option to include special characters
+* 📋 One-click copy to clipboard
+* 🎨 Clean and responsive UI with Tailwind CSS
+* ⚡ Instant password generation when settings change
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the Oxlint configuration
+## 🛠️ Tech Stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+* **React.js**
+* **Vite**
+* **Tailwind CSS**
+* **JavaScript (ES6+)**
+
+---
+
+## 📂 Project Structure
+
+```text
+password-generator/
+│── src/
+│   ├── App.jsx
+│   ├── main.jsx
+│   └── index.css
+│
+├── public/
+├── package.json
+├── vite.config.js
+└── README.md
+```
+
+---
+
+## ⚙️ Installation
+
+Clone the repository:
+
+```bash
+git clone https://github.com/your-username/password-generator.git
+```
+
+Navigate to the project directory:
+
+```bash
+cd password-generator
+```
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+Start the development server:
+
+```bash
+npm run dev
+```
+
+Open your browser and visit:
+
+```text
+http://localhost:5173
+```
+
+---
+
+
+## 🎯 How It Works
+
+1. Select the desired password length.
+2. Enable or disable:
+
+   * Numbers
+   * Special Characters
+3. A new password is generated automatically.
+4. Click **Copy to Clipboard** to copy the password.
+
+---
+
+
+
+## 🤝 Contributing
+
+Contributions are welcome!
+
+1. Fork the repository.
+2. Create a feature branch.
+
+```bash
+git checkout -b feature-name
+```
+
+3. Commit your changes.
+
+```bash
+git commit -m "Add new feature"
+```
+
+4. Push to the branch.
+
+```bash
+git push origin feature-name
+```
+
+5. Open a Pull Request.
+
+---
+
+## 📄 License
+
+This project is licensed under the MIT License.
+
+---
+
+## 👨‍💻 Author
+
+**Ibrahim Hatod Wala**
+
+* GitHub: https://github.com/Ibrahim-techie
+
+
+
