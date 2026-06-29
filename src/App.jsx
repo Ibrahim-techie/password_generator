@@ -34,66 +34,59 @@ const reference=useRef(null);
 
   return (
     <>
-      <div className="flex flex-col items-center justify-center min-h-screen bg-gray-600 p-6">
+      <div className="flex flex-col items-center justify-center min-h-screen bg-linear-to-br from-gray-700 via-gray-600 to-gray-800/80 p-6">
+
         {/* Card */}
-        <div className="bg-gray-300 shadow-lg rounded-xl p-6 w-full max-w-md space-y-6">
-          {/* Title */}
-          <h1 className="text-2xl font-bold text-gray-800 text-center">
-            Password Generator
-          </h1>
+        <div className="bg-white/10 backdrop-blur-md border border-white/20 shadow-lg rounded-xl p-6 w-full max-w-md space-y-6">
+  <h1 className="text-2xl font-bold text-white/90 text-center">Password Generator</h1>
 
-          {/* Password Display */}
-          <input
-            type="text"
-            readOnly
-            placeholder="Generated password"
-            className="w-full px-4 py-2 border rounded-lg text-gray-700 focus:outline-none focus:ring-2 focus:ring-indigo-400"
-            value={password}
-            ref={reference}
-          />
+  <input
+    type="text"
+    readOnly
+    placeholder="Generated password"
+    className="w-full px-4 py-2 bg-white/6 border border-white/10 rounded-lg text-white placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-indigo-400 focus:bg-white/8"
+    value={password}
+    ref={reference}
+  />
 
-          {/* Options */}
+  <div className="space-y-3">
+    <label className="flex items-center space-x-2 text-white/90">Lenght:{length}</label>
+    <input
+      type="range"
+      min={8}
+      max={100}
+      value={length}
+      onChange={(e) => setlength(e.target.value)}
+      className="w-full accent-indigo-400"
+    />
 
-          <div className="space-y-3">
-            <label className="flex items-center space-x-2 ">
-              Lenght:{length}
-            </label>
-            <input
-              type="range"
-              name=""
-              id=""
-              min={8}
-              max={100}
-              value={length}
-              onChange={(e) => setlength(e.target.value)}
-            />
-            <label className="flex items-center space-x-2">
-              <input
-                type="checkbox"
-                className="w-4 h-4 text-indigo-600 border-gray-300 rounded focus:ring-indigo-500"
-                onChange={() => setnumber((prev) => !prev)}
-              />
-              <span className="text-gray-700">Include Numbers</span>
-            </label>
+    <label className="flex items-center space-x-2">
+      <input
+        type="checkbox"
+        className="w-4 h-4 text-indigo-600 bg-white/6 border border-white/10 rounded focus:ring-indigo-500"
+        onChange={() => setnumber((prev) => !prev)}
+      />
+      <span className="text-white/90">Include Numbers</span>
+    </label>
 
-            <label className="flex items-center space-x-2">
-              <input
-                type="checkbox"
-                className="w-4 h-4 text-indigo-600 border-gray-300 rounded focus:ring-indigo-500"
-                onChange={() => {
-                  setcharacter((prev) => !prev);
-                }}
-              />
-              <span className="text-gray-700">Include Special Characters</span>
-            </label>
-          </div>
+    <label className="flex items-center space-x-2">
+      <input
+        type="checkbox"
+        className="w-4 h-4 text-indigo-600 bg-white/6 border border-white/10 rounded focus:ring-indigo-500"
+        onChange={() => setcharacter((prev) => !prev)}
+      />
+      <span className="text-white/90">Include Special Characters</span>
+    </label>
+  </div>
 
-          {/* Copy Button */}
-          <button className="w-full bg-indigo-600 text-white font-semibold py-2 rounded-lg shadow-md hover:bg-indigo-700 transition duration-200 ease-in-out hover:scale-105 hover:opacity-80"
-          onClick={copytoclipboard}>
-            Copy to Clipboard
-          </button>
-        </div>
+  <button
+    className="w-full bg-indigo-500/90 text-white font-semibold py-2 rounded-lg shadow-md hover:bg-indigo-600/95 transition duration-200 ease-in-out hover:scale-105"
+    onClick={copytoclipboard}
+  >
+    Copy to Clipboard
+  </button>
+</div>
+
       </div>
     </>
   );
